@@ -2,9 +2,12 @@ import "@/app/_styles/globals.css";
 import type { Metadata } from "next";
 
 import { Instrument_Sans } from "next/font/google";
+import Header from "./_components/header/Header";
+import Footer from "./_components/footer/Footer";
+import Copyright from "./_components/Copyright";
 
 const instrument_sans = Instrument_Sans({
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -25,7 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={instrument_sans.className}>
-      <body className={` antialiased`}>{children}</body>
+      <body className="text-grey-slate">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <Copyright />
+      </body>
     </html>
   );
 }

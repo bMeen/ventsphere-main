@@ -4,3 +4,27 @@
 
 :root {
 }
+
+.hero-img::before {
+  content: url("/images/decor-(5).svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: 82px;
+  transform: translate(50%, -50%);
+}
+
+/* Decoration at the bottom left */
+.hero-img::after {
+  content: url("/images/decor-(4).svg");
+
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 96px;
+  height: 82px;
+  z-index: 0;
+  transform: translate(-50%, 50%);
+}
