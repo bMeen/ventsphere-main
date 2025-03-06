@@ -1,6 +1,9 @@
 "use client";
 
+import AboutUs from "./_components/about/AboutUs";
+import Benefit from "./_components/benefits/Benefit";
 import Hero from "./_components/hero/Hero";
+import Services from "./_components/services/Services";
 
 /* import Image from "next/image";
 import Hero from "@/public/images/hero.svg";
@@ -10,6 +13,9 @@ function Page() {
   return (
     <>
       <Hero />
+      <AboutUs />
+      <Services />
+      <Benefit />
     </>
   );
 }

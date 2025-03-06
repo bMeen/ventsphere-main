@@ -5,6 +5,40 @@
 :root {
 }
 
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 .tag {
+    font-family: "ClashGrotesk-Medium";
+    @apply font-medium;
+  }
+
+  h1 {
+    @apply text-[4rem] text-space-cadet;
+  }
+  h2 {
+    @apply text-5xl text-space-cadet;
+  }
+  h3 {
+    @apply text-[2.875rem];
+  }
+  h5 {
+    @apply text-[1.75rem];
+  }
+  h6 {
+    @apply text-[1.375rem];
+  }
+}
+
+@layer components {
+  .tag {
+    font-family: "ClashGrotesk-Medium";
+  }
+}
+
 .hero-img::before {
   content: url("/images/decor-(5).svg");
   position: absolute;
@@ -15,7 +49,6 @@
   transform: translate(50%, -50%);
 }
 
-/* Decoration at the bottom left */
 .hero-img::after {
   content: url("/images/decor-(4).svg");
 

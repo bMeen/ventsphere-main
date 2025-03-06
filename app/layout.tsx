@@ -1,4 +1,6 @@
 import "@/app/_styles/globals.css";
+import "@/public/css/clash-grotesk.css";
+
 import type { Metadata } from "next";
 
 import { Instrument_Sans } from "next/font/google";

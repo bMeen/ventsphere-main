@@ -7,6 +7,7 @@ type ButtonType = "primary" | "secondary" | "tertiary";
 
 type ButtonProps = {
   type: ButtonType;
+  className?: string;
   children: React.ReactNode;
 };
 
@@ -19,10 +20,10 @@ const styles = {
   tertiary: base + " text-space-cadet hover:bg-isabelline",
 };
 
-function Button({ type, children }: ButtonProps) {
+function Button({ type, className, children }: ButtonProps) {
   return (
     <Link href="/contact">
-      <button className={styles[type]}>
+      <button className={`${styles[type]} ${className}`}>
         {children}
         {(type === "secondary" || type === "tertiary") && (
           <Image src={arrow} alt="icon" />

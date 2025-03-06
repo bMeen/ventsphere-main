@@ -15,10 +15,13 @@ function Header() {
         </Link>
 
         <nav className="flex items-center flex-1 justify-between">
-          <ul className="flex space-x-11 text-space-cadet">
+          <ul
+            className="flex space-x-11 text-space-cadet"
+            style={{ fontFamily: "ClashGrotesk-Medium" }}
+          >
             {navBar.map((nav) => (
               <Link href={`#${nav}`} key={nav}>
-                <li className="font-medium text-base">{nav}</li>
+                <li className="text-base">{nav}</li>
               </Link>
             ))}
           </ul>
