@@ -1,6 +1,14 @@
-function Tag({ children }: { children: React.ReactNode }) {
+function Tag({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) {
   return (
-    <p className="tag tracking-[0.11em] font-medium text-sm text-olive-green uppercase">
+    <p
+      className={`tag tracking-[0.11em] font-medium text-sm text-olive-green uppercase ${className}`}
+    >
       {children}
     </p>
   );

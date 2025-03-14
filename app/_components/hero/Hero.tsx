@@ -6,9 +6,9 @@ import HeroImg from "@/public/images/hero.svg";
 
 function Hero() {
   return (
-    <section className="bg-isabelline pt-14  px-4">
+    <section className="bg-isabelline pt-28 px-4">
       <Container>
-        <div className="grid grid-cols-2 gap-16 mb-4  items-center">
+        <div className="grid grid-cols-2 gap-16 mb-4">
           <div>
             <h1>Providing Support for Startups</h1>
             <p className="w-[431px] mb-12 text-base">
@@ -21,15 +21,13 @@ function Hero() {
             </div>
           </div>
 
-          <div className="px-[48px] py-[41px] ">
-            <div className="aspect-square relative hero-img ">
-              <Image
-                src="/images/hero.svg"
-                alt="Hero Image"
-                fill
-                className="object-cover rounded-2xl z-20"
-              />
-            </div>
+          <div className="h-[525px] relative hero-img">
+            <Image
+              src="/images/hero.svg"
+              alt="Hero Image"
+              fill
+              className="object-cover object-center rounded-2xl z-20"
+            />
           </div>
         </div>
         <Partners />
