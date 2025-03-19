@@ -6,7 +6,7 @@ export type ContentType = {
   icon: string;
   title: string;
   description: string;
-  type: filterBackground;
+  type?: filterBackground;
 };
 
 export type Testimonial<T> = {
@@ -16,3 +16,5 @@ export type Testimonial<T> = {
   name: T;
   position: T;
 };
+
+export type Faq = { question: string; answer: string };
