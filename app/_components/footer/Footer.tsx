@@ -9,19 +9,22 @@ function Footer() {
   return (
     <footer className="px-4 border-b-[1px] border-cultured pb-24">
       <Container>
-        <div>
-          <section>
-            <Link href="/">
-              <Image src={Logo} alt="Logo" />
-            </Link>
-            <p>
-              Empowering visionary startups to reach new heights through funding
-              and support.
-            </p>
+        <div className="grid grid-cols-[4fr_1fr_1fr_1fr] gap-28">
+          <section className="w-[275px] flex flex-col">
+            <div className="space-y-8">
+              <Link href="/">
+                <Image src={Logo} alt="Logo" />
+              </Link>
+              <p>
+                Empowering visionary startups to reach new heights through
+                funding and support.
+              </p>
+            </div>
             <FooterIcons />
           </section>
 
           <FooterNav
+            className="span-2"
             heading="Quick Links"
             lists={[
               "Our Service",
