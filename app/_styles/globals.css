@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -12,9 +9,10 @@ html {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @layer base {
@@ -42,6 +40,36 @@ html {
   }
   h6 {
     @apply text-[1.375rem];
+  }
+
+  label,
+  input,
+  select,
+  textarea {
+    @apply w-full;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply border-[0.95px] border-cultured p-4 rounded-lg  placeholder:text-[#BBBBBB] focus:outline-none focus:border-space-cadet focus:ring-0 text-space-cadet;
+  }
+
+  input,
+  textarea {
+    @apply bg-cultured;
+  }
+
+  label {
+    @apply text-grey-slate text-sm mb-4 block;
+  }
+
+  form span {
+    @apply block text-red-500 text-sm mt-0.5;
+  }
+
+  textarea {
+    @apply min-h-[129px];
   }
 }
 

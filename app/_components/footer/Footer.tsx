@@ -7,7 +7,7 @@ import FooterNav from "./FooterNav";
 
 function Footer() {
   return (
-    <footer className="px-4 border-b-[1px] border-cultured pb-24">
+    <footer className="px-4 border-b-[1px] pt-14   border-cultured pb-24">
       <Container>
         <div className="grid grid-cols-[4fr_1fr_1fr_1fr] gap-28">
           <section className="w-[275px] flex flex-col">

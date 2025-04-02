@@ -4,7 +4,7 @@ import Questions from "./Questions";
 
 function FAQ() {
   return (
-    <section className="py-44 bg-isabelline pb-[400px]">
+    <section id="FAQ?" className="py-44 px-4 bg-isabelline pb-[400px]">
       <Container>
         <div className="grid grid-cols-2 gap-16">
           <div className="w-[549px] space-y-7">
