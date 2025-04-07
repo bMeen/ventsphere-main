@@ -74,7 +74,7 @@ function Slider() {
           <p className="lg:text-2xl font-medium">{item.text}</p>
 
           <div className="flex items-center gap-5">
-            <Image src={item.image} alt="profile-image" />
+            <Image src={item.image} priority alt="profile-image" />
             <div>
               <p className="font-medium text-sm lg:text-base">{item.name}</p>
               <p className="text-white/50 text-xs lg:text-sm font-normal">

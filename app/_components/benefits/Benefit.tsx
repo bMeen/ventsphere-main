@@ -26,6 +26,7 @@ function Benefit() {
           <div className="md:col-span-3 relative h-[315px] md:h-[394px] lg:h-[415px]  benefit-img md:max-w-md lg:max-w-full w-full">
             <Image
               src={Image1}
+              priority
               alt="Benefit Image"
               fill
               className="rounded-2xl object-cover z-20"
@@ -34,6 +35,7 @@ function Benefit() {
           <div className="md:col-span-3 relative h-[315px] md:h-[394px] lg:h-[415px]  benefit-img md:max-w-md lg:max-w-full w-full">
             <Image
               src={Image2}
+              priority
               alt="Benefit Image"
               fill
               className="rounded-2xl object-cover z-20"

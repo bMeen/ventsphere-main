@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "../Button";
 import Container from "../Container";
 import Partners from "./Partners";
-//import HeroImg from "@/public/images/hero.svg";
+import HeroImg from "@/public/images/hero.svg";
 
 function Hero() {
   return (
@@ -23,9 +23,10 @@ function Hero() {
 
           <div className="h-[315px] md:h-[394px] lg:h-[525px] relative hero-img row-start-1 md:col-start-2 md:max-w-md lg:max-w-full">
             <Image
-              src="/images/hero.svg"
+              src={HeroImg}
               alt="Hero Image"
               fill
+              priority
               className="object-cover object-center rounded-2xl z-20"
             />
           </div>
