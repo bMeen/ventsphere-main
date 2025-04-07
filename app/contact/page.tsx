@@ -11,11 +11,11 @@ function Page() {
   return (
     <section className="px-4 pt-24 pb-36 bg-isabelline">
       <Container>
-        <div className="grid grid-cols-2 gap-28">
-          <div className="w-[549px] space-y-7">
+        <div className="grid lg:grid-cols-2 gap-28">
+          <div className="lg:w-[549px] space-y-3 lg:space-y-7 text-center lg:text-left">
             <Tag>JOIN VENTSPHERE</Tag>
-            <h2 className="text-5xl">Partner With Us</h2>
-            <div className="w-[417px] text-lg">
+            <h2 className="">Partner With Us</h2>
+            <div className="lg:w-[417px] lg:text-lg">
               <p className="mb-7">
                 Fill out the form and our team will get back to you shortly to
                 discuss how we can support your growth and success.

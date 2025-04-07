@@ -30,18 +30,18 @@ const services: ContentType[] = [
 
 function Service() {
   return (
-    <ul className="grid grid-cols-2 gap-11">
+    <ul className="grid md:grid-cols-2 gap-6 lg:gap-11">
       {services.map((item) => (
         <li
           key={item.title}
-          className="border-[1px] border-cultured bg-white p-10 rounded-2xl flex gap-10 items-start"
+          className="border-[1px] border-cultured bg-white px-5 py-7 lg:p-10 rounded-2xl md:flex md:gap-5 lg:gap-10 items-start space-y-2 md:space-y-0"
         >
           <div className="rounded-full p-[0.625rem] bg-rich-black inline-block">
             <Image src={item.icon} alt="icon" width={18} height={19} />
           </div>
-          <div className="space-y-6">
+          <div className="space-y-2 lg:space-y-6">
             <h6 className="text-rich-black font-medium">{item.title}</h6>
-            <p className="max-w-[24.75rem]">{item.description}</p>
+            <p className="md:max-w-[24.75rem]">{item.description}</p>
           </div>
         </li>
       ))}

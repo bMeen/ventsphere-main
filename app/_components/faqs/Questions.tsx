@@ -49,14 +49,16 @@ function Question({ item }: QuestionProps) {
   const src = isOpen ? Minus : Plus;
 
   return (
-    <li className="p-7 bg-white border-[1px] border-cultured rounded-2xl flex gap-7 items-start">
-      <div onClick={toggle} className="cursor-pointer w-5">
+    <li className="p-5 lg:p-7 bg-white border-[1px] border-cultured rounded-2xl flex gap-2 lg:gap-7 items-start">
+      <div onClick={toggle} className="cursor-pointer w-10">
         <Image src={src} alt="icon" />
       </div>
-      <div>
+      <div className="self-center">
         <p className="font-medium text-space-cadet">{item.question}</p>
         {isOpen && (
-          <p className="pt-5  border-t mt-7 w-[484px]">{item.answer}</p>
+          <p className="lg:pt-5 pt-3 mt-3  border-t lg:mt-7 lg:w-[484px]">
+            {item.answer}
+          </p>
         )}
       </div>
     </li>

@@ -6,20 +6,24 @@ import Image2 from "@/public/images/benefit-2.svg";
 
 function Benefit() {
   return (
-    <section id="Benefits" className="py-44 px-4">
+    <section id="Benefits" className="py-24 lg:py-44 px-4">
       <Container>
-        <div className="grid grid-cols-6 gap-y-64 gap-x-32">
-          <div className="col-span-3">
-            <h2 className="mb-8">Unlocking Potential for Ambitious Startups</h2>
-            <p className="mb-12 max-w-[28.5rem] text-[17px]">
+        <div className="grid md:grid-cols-6 gap-14 md:gap-y-40 lg:gap-y-64 lg:gap-x-32">
+          <div className="row-start-2 md:row-start-1 md:col-span-3 text-center md:text-left">
+            <h2 className="mb-4 md:mb-8">
+              Unlocking Potential for Ambitious Startups
+            </h2>
+            <p className="mb-6 md:mb-12 max-w-[28.5rem] lg:text-[17px] mx-auto md:mx-0">
               We empower startups with essential resources and guidance to
               thrive. Our tailored support provides not only capital but also
               strategic insights, mentorship, and access to a vast network of
               industry experts.
             </p>
-            <Button type="primary">Partner with Us</Button>
+            <Button className="mx-auto md:mx-0" type="primary">
+              Partner with Us
+            </Button>
           </div>
-          <div className="col-span-3 relative h-[415px]  benefit-img">
+          <div className="md:col-span-3 relative h-[315px] md:h-[394px] lg:h-[415px]  benefit-img md:max-w-md lg:max-w-full w-full">
             <Image
               src={Image1}
               alt="Benefit Image"
@@ -27,7 +31,7 @@ function Benefit() {
               className="rounded-2xl object-cover z-20"
             />
           </div>
-          <div className="col-span-3 relative h-[415px]  benefit-img">
+          <div className="md:col-span-3 relative h-[315px] md:h-[394px] lg:h-[415px]  benefit-img md:max-w-md lg:max-w-full w-full">
             <Image
               src={Image2}
               alt="Benefit Image"
@@ -35,15 +39,19 @@ function Benefit() {
               className="rounded-2xl object-cover z-20"
             />
           </div>
-          <div className="col-span-3">
-            <h2 className="mb-8">Partner with seasoned professionals</h2>
-            <p className="mb-12 max-w-[28.5rem] text-[17px]">
+          <div className="md:col-span-3 text-center md:text-left">
+            <h2 className="mb-4 md:mb-8">
+              Partner with seasoned professionals
+            </h2>
+            <p className="mb-6 md:mb-12 max-w-[28.5rem] lg:text-[17px] mx-auto md:mx-0">
               We bring extensive industry experience and insights. Our team is
               dedicated to providing you with tailored advice and mentorship,
               ensuring you navigate challenges effectively and capitalize on
               opportunities to drive your startup&apos;s success.
             </p>
-            <Button type="primary">Partner with Us</Button>
+            <Button className="mx-auto md:mx-0" type="primary">
+              Partner with Us
+            </Button>
           </div>
         </div>
       </Container>

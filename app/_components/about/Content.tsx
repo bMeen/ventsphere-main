@@ -25,21 +25,21 @@ const content: ContentType[] = [
 
 function Content() {
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid md:grid-cols-2 gap-6">
       {content.map((item) => (
         <div
           key={item.title}
           className={`${
             backgroundClass[item.type]
-          }   p-[3.875rem] rounded-2xl space-y-28`}
+          } py-12 px-6 lg:p-[3.875rem] rounded-2xl space-y-8 lg:space-y-28`}
         >
           <div className="rounded-full bg-white/10 p-4 inline-block">
             <Image src={item.icon} alt="icon" width={24} height={25} />
           </div>
 
-          <div className="space-y-7">
+          <div className="space-y-3 lg:space-y-7">
             <h5 className="text-white">{item.title}</h5>
-            <p className="text-lg text-white/70">{item.description}</p>
+            <p className="lg:text-lg text-white/70">{item.description}</p>
           </div>
         </div>
       ))}

@@ -9,6 +9,7 @@ type ButtonProps = {
   type: ButtonType;
   className?: string;
   children: React.ReactNode;
+  onClick?: () => void;
 };
 
 const base = "flex rounded-xl py-4 px-6 text-sm font-medium";
@@ -20,10 +21,10 @@ const styles = {
   tertiary: base + " text-space-cadet hover:bg-isabelline",
 };
 
-function Button({ type, className, children }: ButtonProps) {
+function Button({ type, className, children, onClick }: ButtonProps) {
   return (
     <Link href="/contact">
-      <button className={`${styles[type]} ${className}`}>
+      <button className={`${styles[type]} ${className}`} onClick={onClick}>
         {children}
         {(type === "secondary" || type === "tertiary") && (
           <Image src={arrow} alt="icon" />

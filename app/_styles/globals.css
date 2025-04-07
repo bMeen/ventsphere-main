@@ -27,19 +27,23 @@ html {
   }
 
   h1 {
-    @apply text-[4rem] text-space-cadet;
+    @apply text-[2rem] md:text-[2.5rem] lg:text-[4rem] text-space-cadet;
   }
   h2 {
-    @apply text-5xl text-space-cadet;
+    @apply text-[1.5rem] md:text-[2rem] lg:text-5xl text-space-cadet;
   }
   h3 {
-    @apply text-[2.875rem];
+    @apply text-2xl lg:text-[2.875rem];
   }
   h5 {
-    @apply text-[1.75rem];
+    @apply text-2xl lg:text-[1.75rem];
   }
   h6 {
-    @apply text-[1.375rem];
+    @apply text-xl lg:text-[1.375rem];
+  }
+
+  p {
+    @apply text-sm md:text-base;
   }
 
   label,
@@ -87,6 +91,8 @@ html {
   width: 96px;
   height: 82px;
   transform: translate(33%, -37%);
+
+  @apply hidden lg:block;
 }
 
 .hero-img::after {
@@ -100,6 +106,8 @@ html {
   height: 82px;
   z-index: 0;
   transform: translate(-33%, 37%);
+
+  @apply hidden lg:block;
 }
 
 .benefit-img::before {
@@ -110,6 +118,8 @@ html {
   width: 96px;
   height: 82px;
   transform: translate(33%, -37%);
+
+  @apply hidden lg:block;
 }
 
 .benefit-img::after {
@@ -123,4 +133,6 @@ html {
   height: 82px;
   z-index: 0;
   transform: translate(-33%, 37%);
+
+  @apply hidden lg:block;
 }

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 function FooterIcons() {
   return (
-    <div className="flex justify-between w-36 mt-auto">
+    <div className="mx-auto md:mx-0 flex justify-between w-36 mt-4 lg:mt-auto">
       <Image src={linkedIn} alt="LinkedIn icon" />
       <Image src={discord} alt="Discord icon" />
       <Image src={facebook} alt="Facebook icon" />

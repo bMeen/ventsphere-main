@@ -13,12 +13,12 @@ import a7 from "/public/images/hero-decor-2.svg"; */
 
 function Partners() {
   return (
-    <div className="flex items-center gap-[77px] pb-[86px] pt-[94px]">
+    <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-[77px] lg:pb-[86px] lg:pt-[94px] py-9">
       <p>
         Trusted Partnership <br /> with 100+ company’s
       </p>
 
-      <div className="flex flex-1 justify-between flex-wrap">
+      <div className="flex space-x-7 overflow-x-auto snap-x snap-mandatory scrollbar-hide lg:flex-1 md:justify-between md:w-full">
         <Image src={Zippo} alt="partner-logo" />
         <Image src={Grammarly} alt="partner-logo" />
         <Image src={Goodleap} alt="partner-logo" />

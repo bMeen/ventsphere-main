@@ -7,13 +7,13 @@ import FooterNav from "./FooterNav";
 
 function Footer() {
   return (
-    <footer className="px-4 border-b-[1px] pt-14   border-cultured pb-24">
+    <footer className="px-4 border-b-[1px] lg:pt-14 border-cultured pb-12 lg:pb-24">
       <Container>
-        <div className="grid grid-cols-[4fr_1fr_1fr_1fr] gap-28">
-          <section className="w-[275px] flex flex-col">
-            <div className="space-y-8">
+        <div className="grid text-center md:text-left md:grid-cols-2 lg:grid-cols-[4fr_1fr_1fr_1fr] gap-10 md:gap-20 lg:gap-28">
+          <section className="mx-auto md:mx-0 md:w-[275px] flex flex-col">
+            <div className="space-y-4 lg:space-y-8">
               <Link href="/">
-                <Image src={Logo} alt="Logo" />
+                <Image src={Logo} alt="Logo" className="mx-auto md:mx-0" />
               </Link>
               <p>
                 Empowering visionary startups to reach new heights through
@@ -24,7 +24,6 @@ function Footer() {
           </section>
 
           <FooterNav
-            className="span-2"
             heading="Quick Links"
             lists={[
               "Our Service",

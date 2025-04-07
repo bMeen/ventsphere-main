@@ -45,14 +45,14 @@ function Form() {
   return (
     <>
       <div className="hero-img relative">
-        <div className="p-10 bg-white border-[1px] border-cultured rounded-2xl  z-20 relative">
+        <div className="p-5 lg:p-10 bg-white border-[1px] border-cultured rounded-2xl  z-20 relative">
           <form
             className="space-y-8"
             onSubmit={handleSubmit(onSubmit)}
             noValidate
           >
-            <div className="flex gap-5">
-              <div className="formField w-1/2">
+            <div className="flex flex-col gap-8 lg:flex-row  lg:gap-5">
+              <div className="formField lg:w-1/2">
                 <label htmlFor="fullName">Full Name</label>
                 <input
                   type="text"
@@ -67,7 +67,7 @@ function Form() {
                 />
                 <span>{errors.fullName?.message}</span>
               </div>
-              <div className="formField  w-1/2">
+              <div className="formField  lg:w-1/2">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"

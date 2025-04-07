@@ -10,20 +10,28 @@ function CallToAction() {
   return (
     <section className="px-4 -translate-y-1/2">
       <Container className="bg-space-cadet rounded-[30px] p-10 relative">
-        <Image src={decor3} alt="decor" className="absolute top-10 left-10" />
-        <Image src={decor4} alt="decor" className="absolute top-10 right-10" />
+        <Image
+          src={decor3}
+          alt="decor"
+          className="absolute top-10 left-10 hidden md:block"
+        />
+        <Image
+          src={decor4}
+          alt="decor"
+          className="absolute top-10 right-10  hidden md:block"
+        />
         <Image
           src={decor2}
           alt="decor"
-          className="absolute bottom-10 left-10"
+          className="absolute bottom-10 left-10  hidden md:block"
         />
         <Image
           src={decor1}
           alt="decor"
-          className="absolute bottom-10 right-10"
+          className="absolute bottom-10 right-10  hidden md:block"
         />
-        <div className="w-[549px] mx-auto text-center my-12">
-          <h3 className="text-white">
+        <div className="md:w-[549px] mx-auto text-center my-12 space-y-3">
+          <h3 className="text-white lg:text-5xl">
             Let’s Partner for Your Startup Success!
           </h3>
           <p className="text-white/70">
