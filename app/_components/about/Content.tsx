@@ -30,7 +30,7 @@ function Content() {
         <div
           key={item.title}
           className={`${
-            backgroundClass[item.type]
+            item.type && backgroundClass[item.type]
           } py-12 px-6 lg:p-[3.875rem] rounded-2xl space-y-8 lg:space-y-28`}
         >
           <div className="rounded-full bg-white/10 p-4 inline-block">
