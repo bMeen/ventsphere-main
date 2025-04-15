@@ -83,6 +83,25 @@ html {
   }
 }
 
+@layer utilities {
+  .mask-fade-horizontal {
+    -webkit-mask: linear-gradient(
+      90deg,
+      transparent,
+      #f7f6f2 20%,
+      #f7f6f2 80%,
+      transparent
+    );
+    mask: linear-gradient(
+      90deg,
+      transparent,
+      #f7f6f2 20%,
+      #f7f6f2 80%,
+      transparent
+    );
+  }
+}
+
 .hero-img::before {
   content: url("/images/decor-(5).svg");
   position: absolute;
@@ -136,3 +155,4 @@ html {
 
   @apply hidden lg:block;
 }
+

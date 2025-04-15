@@ -5,6 +5,7 @@ import Image from "next/image";
 import Plus from "@/public/icons/ic_round-plus.svg";
 import Minus from "@/public/icons/ic_round-minus.svg";
 import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 
 const faqs: Faq[] = [
   {
@@ -55,11 +56,19 @@ function Question({ item }: QuestionProps) {
       </div>
       <div className="self-center">
         <p className="font-medium text-space-cadet">{item.question}</p>
-        {isOpen && (
-          <p className="lg:pt-5 pt-3 mt-3  border-t lg:mt-7 lg:w-[484px]">
-            {item.answer}
-          </p>
-        )}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.p
+              initial={{ opacity: 0, y: "-100%" }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: "-100%" }}
+              transition={{ duration: 0.1 }}
+              className="lg:pt-5 pt-3 mt-3  border-t lg:mt-7 lg:w-[484px]"
+            >
+              {item.answer}
+            </motion.p>
+          )}
+        </AnimatePresence>
       </div>
     </li>
   );
