@@ -1,12 +1,22 @@
+"use client";
+
 import Button from "../Button";
 import Container from "../Container";
 import Image from "next/image";
 import Image1 from "@/public/images/benefit-1.svg";
 import Image2 from "@/public/images/benefit-2.svg";
+import { motion } from "framer-motion";
 
 function Benefit() {
   return (
-    <section id="Benefits" className="py-24 lg:py-44 px-4">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      id="Benefits"
+      className="py-24 lg:py-44 px-4"
+    >
       <Container>
         <div className="grid md:grid-cols-6 gap-14 md:gap-y-40 lg:gap-y-64 lg:gap-x-32">
           <div className="row-start-2 md:row-start-1 md:col-span-3 text-center md:text-left">
@@ -57,7 +67,7 @@ function Benefit() {
           </div>
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 }
 

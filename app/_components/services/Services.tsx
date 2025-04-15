@@ -1,11 +1,21 @@
+"use client";
+
 import Button from "../Button";
 import Container from "../Container";
 import Tag from "../Tag";
 import Service from "./Service";
+import { motion } from "framer-motion";
 
 function Services() {
   return (
-    <section id="Service" className="py-16 lg:py-32 bg-isabelline px-4">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      id="Service"
+      className="py-16 lg:py-32 bg-isabelline px-4"
+    >
       <Container>
         <div className=" space-y-12  md:space-y-24 mb-16 md:mb-32">
           <div className="w-full lg:w-[560px] lg:mx-auto text-center lg:space-y-8 space-y-2">
@@ -22,7 +32,7 @@ function Services() {
           Partner with Us
         </Button>
       </Container>
-    </section>
+    </motion.section>
   );
 }
 

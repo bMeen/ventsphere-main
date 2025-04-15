@@ -1,12 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import Button from "../Button";
 import Container from "../Container";
 import Partners from "./Partners";
-import HeroImg from "@/public/images/hero.svg";
+import HeroImg from "@/public/images/rect-2.jpg";
+import { motion } from "framer-motion";
 
 function Hero() {
   return (
-    <section className="bg-isabelline pt-14 lg:pt-28 px-4">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="bg-isabelline pt-14 lg:pt-28 px-4"
+    >
       <Container>
         <div className="grid md:grid-cols-2 gap-8 lg:gap-16 mb-4 lg:items-center">
           <div className="text-center md:text-left max-w-md mx-auto lg:max-w-full lg:mx-0">
@@ -21,19 +30,19 @@ function Hero() {
             </div>
           </div>
 
-          <div className="h-[315px] md:h-[394px] lg:h-[525px] relative hero-img row-start-1 md:col-start-2 md:max-w-md lg:max-w-full">
+          <div className="h-[315px] lg:h-[525px] relative hero-img row-start-1 md:col-start-2 md:max-w-md lg:max-w-full w-full">
             <Image
               src={HeroImg}
               alt="Hero Image"
               fill
-              priority
-              className="object-cover object-center rounded-2xl z-20"
+              placeholder="blur"
+              className="object-cover object-top rounded-2xl z-20"
             />
           </div>
         </div>
         <Partners />
       </Container>
-    </section>
+    </motion.section>
   );
 }
 

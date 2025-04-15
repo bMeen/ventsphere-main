@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={instrument_sans.className}>
-      <body className="text-grey-slate">
+      <body className="text-grey-slate overflow-x-hidden">
         <Header />
         <main>{children}</main>
         <Footer />

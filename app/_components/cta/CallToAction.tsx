@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "../Button";
 import Container from "../Container";
 import decor1 from "@/public/images/decor-(2).svg";
@@ -5,10 +7,17 @@ import decor2 from "@/public/images/decor-(3).svg";
 import decor3 from "@/public/images/hero-decor-1.svg";
 import decor4 from "@/public/images/hero-decor-2.svg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function CallToAction() {
   return (
-    <section className="px-4 -translate-y-1/2">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: "-50%" }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="px-4 -translate-y-1/2"
+    >
       <Container className="bg-space-cadet rounded-[30px] p-10 relative">
         <Image
           src={decor3}
@@ -43,7 +52,7 @@ function CallToAction() {
           </Button>
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 }
 

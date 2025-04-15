@@ -1,10 +1,20 @@
+"use client";
+
 import Container from "../Container";
 import Tag from "../Tag";
 import Questions from "./Questions";
+import { motion } from "framer-motion";
 
 function FAQ() {
   return (
-    <section id="FAQ?" className="py-44 px-4 bg-isabelline pb-[400px]">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      id="FAQ?"
+      className="py-44 px-4 bg-isabelline pb-[400px]"
+    >
       <Container>
         <div className="grid lg:grid-cols-2 gap-16">
           <div className="lg:w-[549px] space-y-3 lg:space-y-7 text-center lg:text-left">
@@ -27,7 +37,7 @@ function FAQ() {
           <Questions />
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 }
 
